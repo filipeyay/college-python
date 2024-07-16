@@ -6,3 +6,4 @@ matplotlib
 matplotlib-venn
 scikit-learn
 pygame
+qrcode
