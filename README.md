@@ -1,2 +1,3 @@
-# Projetos da Faculdade e Mini Projetos Python
-Meus trabalhos da faculdade e alguns mini projetos em Python.
+# College Python Projects
+
+Mini python projects I made in College.

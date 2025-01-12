@@ -1,32 +1,37 @@
 import random
 
-def get_escolha():
-    j_escolha = input("Escolha um (pedra/papel/tesoura): ") # escolha do jogador
-    opcoes = ["pedra", "papel", "tesoura"]
-    c_escolha = random.choice(opcoes) # escolha da maquina
-    escolha = { "jogador": j_escolha, "computador": c_escolha }
-    return escolha
 
-def check_vitoria(jogador, computador):
-    print(f"O jogador escolheu {jogador}, a maquina escolheu {computador}.")
-    if jogador == computador:
-        return "Empate!"
-    elif jogador == "pedra":
-        if computador == "tesoura":
-            return "Pedra esmaga tesoura! Vitoria!"
+def get_choice():
+    player_choice = input("Choose one - rock/paper/scissors: ")
+    print("-----------------------------")
+    options = ["rock", "paper", "scissors"]
+    computer_choice = random.choice(options)
+    choice = {"player": player_choice, "computer": computer_choice}
+    return choice
+
+
+def check_victory(player, computer):
+    print(f"Player chose {player}. Computer chose {computer}.")
+
+    if player == computer:
+        return "Draw!"
+    elif player == "rock":
+        if computer == "scissors":
+            return "Rock smash scissors, VICTORY!"
         else:
-            return "Papel cobre pedra! Você perdeu."
-    elif jogador == "papel":
-        if computador == "rock":
-            return "Papel cobre pedra! Vitoria!"
+            return "Paper cover rock, DEFEAT..."
+    elif player == "scissors":
+        if computer == "paper":
+            return "Scissors cut paper, VICTORY!"
         else:
-            return "Tesoura corta papel! Você perdeu."
-    elif jogador == "tesoura":
-        if computador == "papel":
-            return "Tesoura corta papel! Vitoria!"
+            return "Rock smash scissors, DEFEAT..."
+    elif player == "paper":
+        if computer == "rock":
+            return "Paper cover rock, VICTORY!"
         else:
-            return "Pedra esmaga tesoura! Você perdeu."
-        
-escolha = get_escolha()
-resultados = check_vitoria(escolha["jogador"], escolha["computador"])
-print(resultados)
+            return "Scissors cut paper, DEFEAT..."
+
+
+choices = get_choice()
+result = check_victory(choices["player"], choices["computer"])
+print(result)

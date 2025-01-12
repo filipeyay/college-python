@@ -1,4 +1,7 @@
+# TODO: Translate to english
+
 import itertools
+
 
 def calc_combinacoes(elementos):
     combinacoes = []
@@ -6,14 +9,17 @@ def calc_combinacoes(elementos):
         sub_combinacoes = itertools.combinations(elementos, i)
         combinacoes.extend(sub_combinacoes)
     return combinacoes
+
 
 def main():
     input_data = [1, 2, 3]
     combinacoes = calc_combinacoes(input_data)
     print("Combinações intermediárias: ", combinacoes)
 
+
 if __name__ == "__main__":
     main()
+
 
 def calc_combinacoes(elementos):
     combinacoes = []
@@ -22,10 +28,12 @@ def calc_combinacoes(elementos):
         combinacoes.extend(sub_combinacoes)
     return combinacoes
 
+
 def main():
     input_data = [1, 2, 3]
     combinacoes = calc_combinacoes(input_data)
     print(combinacoes)
+
 
 if __name__ == "__main__":
     main()

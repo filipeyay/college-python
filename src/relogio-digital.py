@@ -1,3 +1,5 @@
+# TODO: Translate to english
+
 import tkinter as tk
 from time import strftime
 

@@ -1,3 +1,5 @@
+# TODO: Translate to english
+
 from tkinter import Label
 from functools import partial
 from tkinter import Tk, END, Entry, N, E, S, W, Button
@@ -48,8 +50,7 @@ def cal():
 
     entry_font = font.Font(size=15)
     entry = Entry(root, justify="right", font=entry_font)
-    entry.grid(row=0, column=0, columnspan=4,
-               sticky=N + W + S + E, padx=5, pady=5)
+    entry.grid(row=0, column=0, columnspan=4, sticky=N + W + S + E, padx=5, pady=5)
 
     cal_btn_bg = "#ff6600"
     num_btn_bg = "#4b4b4b"
@@ -76,8 +77,7 @@ def cal():
         activebackground=btn_ativo_bg,
     )
 
-    btn7 = num_btn(text="7", bg=num_btn_bg,
-                   command=lambda: get_input(entry, "7"))
+    btn7 = num_btn(text="7", bg=num_btn_bg, command=lambda: get_input(entry, "7"))
     btn7.grid(row=2, column=0, pady=5)
 
     btn8 = num_btn(text="8", command=lambda: get_input(entry, "8"))
@@ -139,8 +139,7 @@ def cal():
         command=lambda: apagar(entry),
         activebackground=btn_ativo_bg,
     )
-    btn15.grid(row=1, column=0, columnspan=2,
-               padx=3, pady=5, sticky=N + S + E + W)
+    btn15.grid(row=1, column=0, columnspan=2, padx=3, pady=5, sticky=N + S + E + W)
 
     btn16 = Button(
         root,
@@ -180,8 +179,7 @@ def cal():
         exit["command"] = root.quit()
 
     exit = Button(
-        root, text="Sair", fg="white", bg="black",
-        command=quit, height=1, width=7
+        root, text="Sair", fg="white", bg="black", command=quit, height=1, width=7
     )
     exit.grid(row=6, column=1)
 

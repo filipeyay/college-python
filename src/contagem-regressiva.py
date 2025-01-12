@@ -1,17 +1,17 @@
 import time
 
 
-def contagem(t):
+def counter(t):
     while t:
-        minutos, segundos = divmod(t, 60)
-        temporizador = "{:02d}:{:02d}".format(minutos, segundos)
-        print(temporizador, end="\r")
+        minutes, seconds = divmod(t, 60)
+        timer = "{:02d}:{:02d}".format(minutes, seconds)
+        print(timer, end="\r")
         time.sleep(1)
         t -= 1
 
-    print("O tempo acabou!")
+    print("Time is over!")
 
 
-t = input("Digite o tempo em segundos: ")
+t = input("Type the time in seconds: ")
 
-contagem(int(t))
+counter(int(t))
