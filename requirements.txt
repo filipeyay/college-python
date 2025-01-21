@@ -7,3 +7,6 @@ matplotlib-venn
 scikit-learn
 pygame
 qrcode
+json
+xmltodict
+img2pdf
