@@ -1,3 +1,4 @@
-# College Python Projects
+# Python Exercises
 
-Mini python projects I made in College.
+Some exercises I made while studying the Python programming language.
+
